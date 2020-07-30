@@ -3,14 +3,10 @@ import {
   Text,
 } from 'react-native';
 
-
-const App: () => React$Node = () => {
+export default function App() {
   return (
     <>
-      <Text>Teste</Text>
+      <Text>Base</Text>
     </>
-  );
-};
-
-
-export default App;
+  )
+}
