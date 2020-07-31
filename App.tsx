@@ -1,12 +1,14 @@
-import React from 'react';
-import {
-  Text,
-} from 'react-native';
+import React from 'react'
+import Main from './src/Main'
+import store from './src/store/ducks'
+import { Provider } from 'react-redux'
+
+export { store }
 
 export default function App() {
   return (
-    <>
-      <Text>Base</Text>
-    </>
+    <Provider store={store}>
+      <Main />
+    </Provider>
   )
 }
