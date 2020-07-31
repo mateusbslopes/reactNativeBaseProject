@@ -2,14 +2,14 @@ import React from 'react';
 import styled from '@emotion/native';
 
 const StyledTextInput = styled.TextInput`
-    color: ${(props: any) => props.theme.colors.primary[500]};
+    color: ${(props: any): string => props.theme.colors.primary[500]};
     width: 200px;
     text-align: center;
 `;
 
 const TextInputView = styled.View`
     border-bottom-width: 1px;
-    border-bottom-color: ${(props: any) => props.theme.colors.primary[500]};
+    border-bottom-color: ${(props: any): string => props.theme.colors.primary[500]};
 `;
 
 type TextInputProps = {
@@ -18,7 +18,7 @@ type TextInputProps = {
     style?: any;
 };
 
-const TextInput = ({ value, onChangeText, style }: TextInputProps) => (
+const TextInput = ({ value, onChangeText, style }: TextInputProps): any => (
     <TextInputView>
         <StyledTextInput value={value} onChangeText={onChangeText} style={style} />
     </TextInputView>

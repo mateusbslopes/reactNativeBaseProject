@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 import themes from './theme';
 import Form from './components/pages/Form';
 
-const mapStateToProps = (state: any) => ({ themeName: state.theme.name });
+const mapStateToProps = (state: any): any => ({ themeName: state.theme.name });
 
 const connector = connect(mapStateToProps);
 
@@ -12,7 +12,7 @@ type MainProps = ConnectedProps<typeof connector> & {
     themeName: string;
 };
 
-const Main = ({ themeName }: MainProps) => {
+const Main = ({ themeName }: MainProps): any => {
     const theme: any = themes[themeName];
     return (
         <ThemeProvider theme={theme}>

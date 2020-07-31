@@ -4,12 +4,12 @@ import { GitUserPayload, GitUser } from '../../types';
 export const SET_USER = 'SET_USER';
 export const FETCH_USER = 'FETCH_USER';
 
-export const setUser = (user: GitUser) => ({
+export const setUser = (user: GitUser): any => ({
     type: SET_USER,
     payload: { user },
 });
 
-export const fetchUser = (username: string) => ({
+export const fetchUser = (username: string): any => ({
     type: FETCH_USER,
     payload: { username },
 });

@@ -1,9 +1,9 @@
-import { ThemePayload } from '../../types';
+import { ThemePayload, Theme } from '../../types';
 
 // Actions
 export const SET_THEME = 'SET_THEME';
 
-export const setTheme = (theme: string) => ({
+export const setTheme = (theme: string): any => ({
     type: SET_THEME,
     payload: { theme },
 });
@@ -13,7 +13,7 @@ const defaultState = {
 };
 
 // Reducer
-export default function (state = defaultState, { type, payload }: ThemePayload) {
+export default function (state = defaultState, { type, payload }: ThemePayload): Theme {
     switch (type) {
         case SET_THEME:
             return { name: payload.theme };

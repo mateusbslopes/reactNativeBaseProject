@@ -8,14 +8,14 @@ import TextInput from '../atoms/TextInput';
 import Text from '../atoms/Text';
 import GitUser from '../organisms/GitUser';
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: any): any => ({
     firstName: state.person.firstName,
     theme: state.theme.name,
 });
 
 const mapDispatchToProps = {
-    setFirstName: (firstName: string) => setFirstNameAction(firstName),
-    setTheme: (theme: string) => setThemeAction(theme),
+    setFirstName: (firstName: string): any => setFirstNameAction(firstName),
+    setTheme: (theme: string): any => setThemeAction(theme),
 };
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
@@ -27,19 +27,19 @@ const Form = ({
     setFirstName,
     theme,
     setTheme,
-}: FormProps) => (
+}: FormProps): any => (
     <Container>
         <Text>
             First Name:
             {firstName}
         </Text>
-        <TextInput onChangeText={(text: string) => setFirstName(text)} value={firstName} style={{ color: 'red' }} />
-        <TextInput onChangeText={(text: string) => setFirstName(text)} value={firstName} />
+        <TextInput onChangeText={(text: string): any => setFirstName(text)} value={firstName} style={{ color: 'red' }} />
+        <TextInput onChangeText={(text: string): any => setFirstName(text)} value={firstName} />
         <CheckBoxView>
             <Text>Apagar as luzes?</Text>
             <CheckBox
                 checked={theme === 'dark'}
-                onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onPress={(): void => setTheme(theme === 'dark' ? 'light' : 'dark')}
             />
         </CheckBoxView>
         <GitUser />
@@ -47,7 +47,7 @@ const Form = ({
 );
 
 const Container = styled.View`
-  background-color: ${(props: any) => props.theme.colors.ternary[500]};
+  background-color: ${(props: any): string => props.theme.colors.ternary[500]};
   flex: 1;
   align-items: center;
   justify-content: center;
