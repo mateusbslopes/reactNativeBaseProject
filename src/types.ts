@@ -1,29 +1,29 @@
 export type Person = {
-    firstName: string
-}
+    firstName: string;
+};
 
 export type Theme = {
-    name: string
-}
+    name: string;
+};
 
 export type GitUser = {
-    name?: string,
-    username: string
-}
+    name?: string;
+    username: string;
+};
 
 export type Payload = {
-    type: string
-    payload: any
-}
+    type: string;
+    payload: any;
+};
 
 export type PersonPayload = Payload & {
-    payload: Person
-}
+    payload: Person;
+};
 
 export type ThemePayload = Payload & {
-    payload: Theme
-}
+    payload: Theme;
+};
 
 export type GitUserPayload = Payload & {
-    payload: GitUser
-}
+    payload: GitUser;
+};
