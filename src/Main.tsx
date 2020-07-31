@@ -1,9 +1,8 @@
 import { connect, ConnectedProps } from 'react-redux'
 import React from 'react'
-//import { ThemeProvider } from 'emotion-theming'
-//import themes from './theme'
+import { ThemeProvider } from 'emotion-theming'
+import themes from './theme'
 //import Form from './components/pages/Form'
-import {Text } from 'react-native'
 
 const mapStateToProps = (state: any) => ({ themeName: state.theme.name })
 
@@ -14,9 +13,11 @@ type MainProps = ConnectedProps<typeof connector> & {
 }
 
 const Main = ({ themeName }: MainProps) => {
-    //const theme: any = themes[themeName]
+    const theme: any = themes[themeName]
     return (
-        <Text>Teste{themeName}</Text>
+        <ThemeProvider theme={theme}>
+
+        </ThemeProvider>
     )
 }
 
